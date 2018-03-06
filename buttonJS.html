@@ -64,6 +64,12 @@
             <button onclick="add1()">+1</button>
             <button onclick="add10()">+10</button>
       </section>
+
+      <section id="bb6" class="bigbox">
+            <h3 class="subtitle">Challenge 6</h3>
+
+            <button onclick="random()" > Random Background Color</button>
+      </section>
 </body>
 <script type="text/javascript">
 //type your code for each button below the series of comments.  All javascript must be inside the script-tags
@@ -124,5 +130,14 @@ function add10(){
   value = value + 10
   doc.querySelector('span').innerHTML = value;
 }
+//challenge 6
+function random(){
+  const doc=document;
+  let section6=doc.querySelector("#bb6");
+  let title=doc.querySelector("#bb6 > .subtitle");
+  let words=doc.querySelector("#bb6 > h3 > div")
+  section6.style.backgroundColor= "#" + Math.floor(Math.random() * 1000000);
+  title.style.color= "#" + Math.floor(Math.random() * 1000000);
+  }
 </script>
 </html>
